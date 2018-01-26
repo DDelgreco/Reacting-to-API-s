@@ -23,7 +23,6 @@ export default class Films extends Component {
   render() {
     return (
       <div className="container">
-        <h3></h3>
         <FilmCard filmList={this.state.films} />
       </div>
     );
