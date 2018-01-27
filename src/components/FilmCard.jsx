@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Ghibli from "./ghibli.jpg";
 
 export default class FilmCard extends Component {
@@ -15,7 +16,11 @@ export default class FilmCard extends Component {
       };
 
       return (
-        <div className="card mx-auto" style={style} key={film.id}>
+        <div
+          className="card mx-auto justify-content-center"
+          style={style}
+          key={film.id}
+        >
           <img className="card-img-top w-100" src={Ghibli} alt="" />
           <div className="card-body">
             <h5 className="card-title font-weight-bold">{film.title}</h5>
@@ -29,11 +34,9 @@ export default class FilmCard extends Component {
             <li className="list-group-item">{film.producer}</li>
             <li className="list-group-item">{film.release_date}</li>
           </ul>
-          <div className="card-body">
-            <a href="" className="card-link">
-              Card link
-            </a>
-          </div>
+          <Link className="btn btn-primary" to={`/films/${film.id}`}>
+            More Details
+          </Link>
         </div>
       );
     });

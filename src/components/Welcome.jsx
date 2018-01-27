@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "./logo.png";
 
-const Header = () => {
+const Welcome = () => {
   return (
     <div className="container">
       <div>
         <img className="w-100" src={Logo} alt="" />
-        <Link className="w-100 h-100" to="/" />
+        <Link className="w-100" to="/" src={Logo} />
       </div>
       <div className="row justify-content-center">
         <Link className="btn btn-primary btn-lg m-5" to="/films">
@@ -21,4 +21,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Welcome;
